@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.ComponentModel.DataAnnotations;
 // Text input for file name
 // Iterate thru directory of files to confirm file exists
 //use Directory class to search by extension?
@@ -37,12 +38,23 @@ namespace CSV
             List<string> validEmail = new List<string>();
             List<string> invalidEmail = new List<string>();
 
+            //validEmail.Add() and invalidEmail.Add() to add to list
+
             foreach (var f in files)
             {
                 //parse csv
                 //if file exists iterate thru each row to conf email is accurate
                 //else print error message
                 Console.WriteLine("{0} contains {1}", f.File, f.Line);
+
+
+                //EmailAddress Attribute validates an email address
+                var email = new EmailAddressAttribute();
+                bool valid;
+                valid = email.IsValid("test@gmail.com"); //change this to email from csv file
+
+                if (new EmailAddressAttribute().IsValid("someone@somewhere.com"))
+                    valid = true;
             }
             //print lists of valid and invalid email lists
             Console.WriteLine("Valid Email List:");
