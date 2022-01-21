@@ -1,0 +1,15 @@
+/Users/kristenl/Desktop/Projects/CSV/bin/Debug/net6.0/CSV
+/Users/kristenl/Desktop/Projects/CSV/bin/Debug/net6.0/CSV.deps.json
+/Users/kristenl/Desktop/Projects/CSV/bin/Debug/net6.0/CSV.runtimeconfig.json
+/Users/kristenl/Desktop/Projects/CSV/bin/Debug/net6.0/CSV.dll
+/Users/kristenl/Desktop/Projects/CSV/bin/Debug/net6.0/ref/CSV.dll
+/Users/kristenl/Desktop/Projects/CSV/bin/Debug/net6.0/CSV.pdb
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.csproj.AssemblyReference.cache
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.AssemblyInfoInputs.cache
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.AssemblyInfo.cs
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.csproj.CoreCompileInputs.cache
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.dll
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/ref/CSV.dll
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.pdb
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.genruntimeconfig.cache
