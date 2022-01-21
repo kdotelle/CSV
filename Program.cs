@@ -33,12 +33,30 @@ namespace CSV
                             File = retrievedFile,
                             Line = line
                         };
+            //initialize lists for valid and invalid emails
+            List<string> validEmail = new List<string>();
+            List<string> invalidEmail = new List<string>();
 
             foreach (var f in files)
             {
+                //parse csv
+                //if file exists iterate thru each row to conf email is accurate
+                //else print error message
                 Console.WriteLine("{0} contains {1}", f.File, f.Line);
             }
-            Console.WriteLine("{0} lines found.", files.Count().ToString());
+            //print lists of valid and invalid email lists
+            Console.WriteLine("Valid Email List:");
+            foreach (string email in validEmail)
+            {
+                Console.WriteLine(email);
+            }
+
+            Console.WriteLine("Invalid Email List:");
+            foreach (string email in invalidEmail)
+            {
+                Console.WriteLine(email);
+            }
         }
+
     }
 }
