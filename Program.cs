@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.ComponentModel.DataAnnotations;
+//using Microsoft.VisualBasic.FileIO;
 // Text input for file name
 // Iterate thru directory of files to confirm file exists
 //use Directory class to search by extension?
@@ -20,20 +21,31 @@ namespace CSV
         {
             Console.WriteLine("GDC Technical Assignment");
             Console.WriteLine("Enter the file name:");
-            var inputFile = Console.ReadLine();
+            var inputFile = Console.ReadLine() + ".csv";
             Console.WriteLine("Searching for file: {0}", inputFile);
 
             //from documentation
-            string archiveDirectory = @"C:\archive";
+            string currentDirectory = Directory.GetCurrentDirectory();
 
-            var files = from retrievedFile in Directory.EnumerateFiles(archiveDirectory, "*.csv", SearchOption.AllDirectories)
-                        from line in File.ReadLines(retrievedFile)
-                        where line.Contains(inputFile)
-                        select new
-                        {
-                            File = retrievedFile,
-                            Line = line
-                        };
+            var files = Directory.GetFiles(currentDirectory, "*.csv");
+
+            // var files = from retrievedFile in Directory.EnumerateFiles(currentDirectory, "*.csv", SearchOption.AllDirectories)
+
+            //             from line in File.ReadLines(retrievedFile)
+            //             where line.Contains(inputFile)
+            //             select new
+            //             {
+            //                 File = retrievedFile,
+            //                 Line = line
+            //             };
+            //File.Exists(inputFile);
+
+            Console.WriteLine(File.Exists(inputFile));
+            foreach (string email in files)
+            {
+                Console.WriteLine(email);
+            }
+
             //initialize lists for valid and invalid emails
             List<string> validEmail = new List<string>();
             List<string> invalidEmail = new List<string>();
@@ -45,7 +57,7 @@ namespace CSV
                 //parse csv
                 //if file exists iterate thru each row to conf email is accurate
                 //else print error message
-                Console.WriteLine("{0} contains {1}", f.File, f.Line);
+                //Console.WriteLine("{0} contains {1}", f.File, f.Line);
 
 
                 //EmailAddress Attribute validates an email address
