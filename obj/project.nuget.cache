@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vCZuDlpWG0+lMDp6P9vXPo835+2FODepVBFGvHwPlCcGYT9hyXRUQUzhrqR4qhDnfq65jNdtV0hUBsLk2AjJ8g==",
+  "dgSpecHash": "ZiOKFiDWyLZhJLF6yj8Te7893CLzT9XBpUm53oOC4JkJ0YQOy6mjcuvqRzjHEsQ6Lhi446NMuisoCun22eGqYw==",
   "success": true,
   "projectFilePath": "/Users/kristenl/Desktop/Projects/CSV/CSV.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/kristenl/.nuget/packages/csvhelper/27.2.1/csvhelper.27.2.1.nupkg.sha512"
+  ],
   "logs": []
 }

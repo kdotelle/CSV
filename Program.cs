@@ -38,13 +38,18 @@ namespace CSV
             //                 File = retrievedFile,
             //                 Line = line
             //             };
-            //File.Exists(inputFile);
 
-            Console.WriteLine(File.Exists(inputFile));
-            foreach (string email in files)
+            if (File.Exists(inputFile))
             {
-                Console.WriteLine(email);
+                Console.WriteLine("File {0} exists", inputFile);
+                Console.WriteLine(File.ReadAllText(inputFile));
             }
+            else if (!File.Exists(inputFile))
+            {
+                Console.WriteLine("{0} does not exist in this Directory", inputFile);
+            }
+
+
 
             //initialize lists for valid and invalid emails
             List<string> validEmail = new List<string>();
@@ -56,8 +61,7 @@ namespace CSV
             {
                 //parse csv
                 //if file exists iterate thru each row to conf email is accurate
-                //else print error message
-                //Console.WriteLine("{0} contains {1}", f.File, f.Line);
+
 
 
                 //EmailAddress Attribute validates an email address

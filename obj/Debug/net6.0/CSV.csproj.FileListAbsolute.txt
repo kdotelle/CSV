@@ -13,3 +13,5 @@
 /Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/ref/CSV.dll
 /Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.pdb
 /Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.genruntimeconfig.cache
+/Users/kristenl/Desktop/Projects/CSV/bin/Debug/net6.0/CsvHelper.dll
+/Users/kristenl/Desktop/Projects/CSV/obj/Debug/net6.0/CSV.csproj.CopyComplete
