@@ -44,7 +44,23 @@ namespace CSV
                 string fullPath = Path.GetFullPath(inputFile);
                 Console.WriteLine(fullPath);
                 Console.WriteLine("File {0} exists", inputFile);
-                Console.WriteLine(File.ReadAllText(inputFile));
+                //array with each line
+                string[] csvLines = File.ReadAllLines(fullPath);
+
+                //list with email data
+                var emails = new List<string>();
+
+                foreach (var line in csvLines)
+                {
+                    string[] rowData = line.Split(',');
+                    emails.Add(rowData[2]);
+                }
+                //all emails added to a list
+                foreach (var email in emails)
+                {
+                    Console.WriteLine(email);
+                }
+
             }
             else if (!File.Exists(inputFile))
             {
