@@ -39,6 +39,11 @@ namespace CSV
             //                 Line = line
             //             };
 
+            //initialize lists for valid and invalid emails
+            List<string> validEmail = new List<string>();
+            List<string> invalidEmail = new List<string>();
+
+            //validEmail.Add() and invalidEmail.Add() to add to list
             if (File.Exists(inputFile))
             {
                 string fullPath = Path.GetFullPath(inputFile);
@@ -55,11 +60,39 @@ namespace CSV
                     string[] rowData = line.Split(',');
                     emails.Add(rowData[2]);
                 }
+
+
                 //all emails added to a list
                 foreach (var email in emails)
                 {
                     Console.WriteLine(email);
+                    var checkEmail = new EmailAddressAttribute();
+                    bool valid;
+                    valid = checkEmail.IsValid(email); //change this to email from csv file
+
+                    if (valid == true)
+                    {
+                        valid = true;
+                        validEmail.Add(email);
+                    }
+                    else
+                    {
+                        valid = false;
+                        invalidEmail.Add(email);
+                    }
                 }
+
+
+                // foreach (var f in emails)
+                // {
+                //     //parse csv
+                //     //if file exists iterate thru each row to conf email is accurate
+
+
+
+                //     //EmailAddress Attribute validates an email address
+
+                // }
 
             }
             else if (!File.Exists(inputFile))
@@ -70,27 +103,7 @@ namespace CSV
 
 
 
-            //initialize lists for valid and invalid emails
-            List<string> validEmail = new List<string>();
-            List<string> invalidEmail = new List<string>();
 
-            //validEmail.Add() and invalidEmail.Add() to add to list
-
-            foreach (var f in files)
-            {
-                //parse csv
-                //if file exists iterate thru each row to conf email is accurate
-
-
-
-                //EmailAddress Attribute validates an email address
-                var email = new EmailAddressAttribute();
-                bool valid;
-                valid = email.IsValid("test@gmail.com"); //change this to email from csv file
-
-                if (new EmailAddressAttribute().IsValid("someone@somewhere.com"))
-                    valid = true;
-            }
             //print lists of valid and invalid email lists
             Console.WriteLine("Valid Email List:");
             foreach (string email in validEmail)
