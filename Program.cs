@@ -41,6 +41,8 @@ namespace CSV
 
             if (File.Exists(inputFile))
             {
+                string fullPath = Path.GetFullPath(inputFile);
+                Console.WriteLine(fullPath);
                 Console.WriteLine("File {0} exists", inputFile);
                 Console.WriteLine(File.ReadAllText(inputFile));
             }
@@ -48,6 +50,7 @@ namespace CSV
             {
                 Console.WriteLine("{0} does not exist in this Directory", inputFile);
             }
+
 
 
 
@@ -87,4 +90,5 @@ namespace CSV
         }
 
     }
+
 }
